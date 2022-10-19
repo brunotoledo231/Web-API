@@ -1,13 +1,14 @@
-﻿using WebApiProgII.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using WebApiProgII.Models;
 
 namespace WebApiProgII.Interfaces
 {
     public interface IAplicacion
     {
-        List<Producto> ConsultarProductos();
-        List<Producto> AgregarProductos();
-        List<Producto> ActualizarProductos();
-        List<Producto> EliminarProductos();
+        public IActionResult Get();
+        public IActionResult Post(Producto p);
+        public IActionResult Put(Producto p);
+        public IActionResult Delete (Producto p);
 
     }
 }

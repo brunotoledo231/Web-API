@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documentos\\vruno\\TECNICATURA EN PROGRAMACION UTN\\SEGUNDO CUATRIMESTRE_2022\\REPOS\\WebApiProgII\\WebApiProgII\\WebApiProgII.csproj": {}
+    "D:\\Documentos\\vruno\\TECNICATURA EN PROGRAMACION UTN\\SEGUNDO CUATRIMESTRE_2022\\REPOS\\WebApiEjercicios\\WebApiProgII\\WebApiProgII.csproj": {}
   },
   "projects": {
-    "D:\\Documentos\\vruno\\TECNICATURA EN PROGRAMACION UTN\\SEGUNDO CUATRIMESTRE_2022\\REPOS\\WebApiProgII\\WebApiProgII\\WebApiProgII.csproj": {
+    "D:\\Documentos\\vruno\\TECNICATURA EN PROGRAMACION UTN\\SEGUNDO CUATRIMESTRE_2022\\REPOS\\WebApiEjercicios\\WebApiProgII\\WebApiProgII.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\vruno\\TECNICATURA EN PROGRAMACION UTN\\SEGUNDO CUATRIMESTRE_2022\\REPOS\\WebApiProgII\\WebApiProgII\\WebApiProgII.csproj",
+        "projectUniqueName": "D:\\Documentos\\vruno\\TECNICATURA EN PROGRAMACION UTN\\SEGUNDO CUATRIMESTRE_2022\\REPOS\\WebApiEjercicios\\WebApiProgII\\WebApiProgII.csproj",
         "projectName": "WebApiProgII",
-        "projectPath": "D:\\Documentos\\vruno\\TECNICATURA EN PROGRAMACION UTN\\SEGUNDO CUATRIMESTRE_2022\\REPOS\\WebApiProgII\\WebApiProgII\\WebApiProgII.csproj",
+        "projectPath": "D:\\Documentos\\vruno\\TECNICATURA EN PROGRAMACION UTN\\SEGUNDO CUATRIMESTRE_2022\\REPOS\\WebApiEjercicios\\WebApiProgII\\WebApiProgII.csproj",
         "packagesPath": "C:\\Users\\PC ESCRITORIO\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\vruno\\TECNICATURA EN PROGRAMACION UTN\\SEGUNDO CUATRIMESTRE_2022\\REPOS\\WebApiProgII\\WebApiProgII\\obj\\",
+        "outputPath": "D:\\Documentos\\vruno\\TECNICATURA EN PROGRAMACION UTN\\SEGUNDO CUATRIMESTRE_2022\\REPOS\\WebApiEjercicios\\WebApiProgII\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "d:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

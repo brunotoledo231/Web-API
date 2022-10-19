@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApiProgII.Interfaces;
 using WebApiProgII.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -46,7 +47,7 @@ namespace WebApiProgII.Controllers
         // POST api/<TemperaturaController>
         [HttpPost]
         public IActionResult Post([FromBody] Temperatura t)
-        {
+        { 
             if(t == null||string.IsNullOrEmpty(t.Identificador.ToString()))
             {
                 return BadRequest("el identificador no es valido");
@@ -57,7 +58,7 @@ namespace WebApiProgII.Controllers
             }
             registroTemp.Add(t);
             
-            return Ok("se cargo con exito el registro de temperatura");
+            return Ok(t);
             
         }
 
@@ -76,30 +77,51 @@ namespace WebApiProgII.Controllers
         }
 
         // PUT api/<TemperaturaController>/5
-        [HttpPut("{identificador}")]
-        public IActionResult Put( [FromBody] Temperatura t)
-        {
-            if (Existe(t)==true)
+        [HttpPut]
+        public IActionResult Put( Temperatura t)
+        { 
+            //if (Existe(t)==true)
+            //{
+            //    registroTemp.Remove(t);
+            //    registroTemp.Add(t);
+            //    return Ok(t);
+            //}
+            //else return NotFound();
+            foreach(Temperatura temp in registroTemp)
             {
-                registroTemp.Remove(t);
-                registroTemp.Add(t);
-                return Ok("Se actualizo el registro");
+                if (temp.Identificador == t.Identificador)
+                {
+                    temp.FechaHora = t.FechaHora;
+                    temp.Valor = t.Valor;
+                    return Ok(t);
+                }
             }
-            else return BadRequest("el registro que intenta actualizar no existe");
+            return NotFound();
             
         }
 
         // DELETE api/<TemperaturaController>/5
         [HttpDelete("{identificador}")]
-        public IActionResult Delete(Temperatura t)
+        public IActionResult Delete(int t)
         {
-            if (!Existe(t))
+            //if (!Existe(t))
+            //{
+            //    registroTemp.Remove(t);
+            //    return Ok("Se borro exitosamente el registro");
+            //}
+            //else return NotFound();
+            foreach(Temperatura temp in registroTemp)
             {
-                registroTemp.Remove(t);
-                return Ok("Se borro exitosamente el registro");
+                if(temp.Identificador==t)
+                {
+                    registroTemp.Remove(temp);
+                    return Ok("Se elimino el registro");
+                }
             }
-            else return BadRequest("Hubo un problema al querer borrar el registro");
+            return NotFound();
             
         }
+
+        
     }
 }
